@@ -1,4 +1,3 @@
 use_frameworks!
 
-pod 'Alamofire', '~> 3.4'
-pod "ElasticTransitionObjC"
+pod 'Alamofire', '~> 3.4' 
