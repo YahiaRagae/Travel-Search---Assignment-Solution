@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		005837E11D0F485C0062D978 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005837E01D0F485C0062D978 /* SplashScreenViewController.m */; };
 		00CD78F71D0DC6DB006ADE39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CD78F61D0DC6DB006ADE39 /* main.m */; };
 		00CD78FA1D0DC6DB006ADE39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CD78F91D0DC6DB006ADE39 /* AppDelegate.m */; };
 		00CD78FD1D0DC6DB006ADE39 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CD78FC1D0DC6DB006ADE39 /* ViewController.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		005837DF1D0F485C0062D978 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
+		005837E01D0F485C0062D978 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
 		00CD78F21D0DC6DB006ADE39 /* Travel Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CD78F61D0DC6DB006ADE39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00CD78F81D0DC6DB006ADE39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				00CD79031D0DC6DB006ADE39 /* LaunchScreen.storyboard */,
 				00CD79061D0DC6DB006ADE39 /* Info.plist */,
 				00CD78F51D0DC6DB006ADE39 /* Supporting Files */,
+				005837DF1D0F485C0062D978 /* SplashScreenViewController.h */,
+				005837E01D0F485C0062D978 /* SplashScreenViewController.m */,
 			);
 			path = "Travel Search";
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 			files = (
 				00CD79291D0DC730006ADE39 /* Names.m in Sources */,
 				00CD79281D0DC730006ADE39 /* GeoPosition.m in Sources */,
+				005837E11D0F485C0062D978 /* SplashScreenViewController.m in Sources */,
 				00CD792A1D0DC730006ADE39 /* PlaceItem.m in Sources */,
 				00CD79271D0DC730006ADE39 /* AlternativeNames.m in Sources */,
 				00CD78FD1D0DC6DB006ADE39 /* ViewController.m in Sources */,
