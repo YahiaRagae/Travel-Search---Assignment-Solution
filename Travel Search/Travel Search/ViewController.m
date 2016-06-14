@@ -29,11 +29,12 @@
 #pragma
 #pragma mark - Class Methods
 -(void) initViews{
-    UIButton * btn= [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn addTarget:self action:@selector(btnHideKeyBoardAction:) forControlEvents:UIControlEventTouchUpInside];
-    
-
-    [self.tableView setBackgroundView:btn];
+    UIView * bg= [[UIView alloc] initWithFrame:self.view.frame];
+    UIImageView * img = [[UIImageView alloc] initWithFrame:self.view.frame];
+    img.image = [UIImage imageNamed:@"bg"];
+    img.alpha=0.2;
+    [bg addSubview:img];
+    [self.tableView setBackgroundView:bg];
 
 }
 #pragma

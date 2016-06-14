@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "SplashScreenViewController.h"
+#import <ABCustomUINavigationController/CubeNavigationController.h>
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    SplashScreenViewController * vc= [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SplashScreenViewController" ];
+ 
+    
+    CubeNavigationController * nav =[[CubeNavigationController alloc] initWithRootViewController:vc];
+    
+    [nav.navigationBar setHidden:true];
+    
+    self.window.rootViewController=nav;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

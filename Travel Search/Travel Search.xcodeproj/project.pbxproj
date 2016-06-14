@@ -124,20 +124,17 @@
 		00CD78F41D0DC6DB006ADE39 /* Travel Search */ = {
 			isa = PBXGroup;
 			children = (
+				00F126281D10263D000739DA /* ViewControllers */,
 				005837ED1D0F7FB00062D978 /* Resources */,
 				00CD792B1D0DC8A9006ADE39 /* Libs */,
 				00CD791A1D0DC730006ADE39 /* DataAccessLayer */,
 				00CD78F81D0DC6DB006ADE39 /* AppDelegate.h */,
 				00CD78F91D0DC6DB006ADE39 /* AppDelegate.m */,
-				00CD78FB1D0DC6DB006ADE39 /* ViewController.h */,
-				00CD78FC1D0DC6DB006ADE39 /* ViewController.m */,
 				00CD78FE1D0DC6DB006ADE39 /* Main.storyboard */,
 				00CD79011D0DC6DB006ADE39 /* Assets.xcassets */,
 				00CD79031D0DC6DB006ADE39 /* LaunchScreen.storyboard */,
 				00CD79061D0DC6DB006ADE39 /* Info.plist */,
 				00CD78F51D0DC6DB006ADE39 /* Supporting Files */,
-				005837DF1D0F485C0062D978 /* SplashScreenViewController.h */,
-				005837E01D0F485C0062D978 /* SplashScreenViewController.m */,
 			);
 			path = "Travel Search";
 			sourceTree = "<group>";
@@ -211,6 +208,17 @@
 				00CD792E1D0DC8B4006ADE39 /* MPGTextField.m */,
 			);
 			path = MPGTextField;
+			sourceTree = "<group>";
+		};
+		00F126281D10263D000739DA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				005837DF1D0F485C0062D978 /* SplashScreenViewController.h */,
+				005837E01D0F485C0062D978 /* SplashScreenViewController.m */,
+				00CD78FB1D0DC6DB006ADE39 /* ViewController.h */,
+				00CD78FC1D0DC6DB006ADE39 /* ViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		E793EF57C92E13166FA06431 /* Pods */ = {
