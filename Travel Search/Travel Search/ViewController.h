@@ -19,6 +19,9 @@
     
     PlaceItem * departureItem;
     PlaceItem * distinationItem;
+    
+    UIDatePicker * dateofBirthDatePicker;
+    NSDate * currentSelectedDate;
 
 }
 

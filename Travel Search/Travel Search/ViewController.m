@@ -9,7 +9,8 @@
 #import "ViewController.h"
 #import "Travel_Search-Swift.h"
 #import <CoreLocation/CoreLocation.h>
-
+#import "ActionSheetPicker.h"
+#import <Toast/UIView+Toast.h>
 @interface ViewController ()
 
 @end
@@ -20,7 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-       [self initViews];
+    [self initData];
+    [self initViews];
 }
  
 
@@ -30,6 +32,15 @@
 }
 #pragma
 #pragma mark - Class Methods
+-(void)initData{
+    NSDateFormatter *formatter; 
+    if(currentSelectedDate == nil ){
+        currentSelectedDate =[NSDate date];
+    }
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd-MM-yyyy"];
+    [self.btnDatePicker setTitle:[formatter stringFromDate:currentSelectedDate] forState:UIControlStateNormal];
+}
 -(void) initViews{
     //init BackGround
     UIView * bg= [[UIView alloc] initWithFrame:self.view.frame];
@@ -43,6 +54,18 @@
     
     [self.tfDistinationCity setAutoCompleteTableAppearsAsKeyboardAccessory:YES];
     [self.tfDepartureCity setAutoCompleteTableAppearsAsKeyboardAccessory:YES];
+    
+    
+    //init Search Button
+    self.btnSearch.layer.borderColor = [UIColor blackColor].CGColor;
+    self.btnSearch.layer.borderWidth = 1;
+    self.btnSearch.layer.cornerRadius = 10;
+    
+    //init DatePickerButton
+    self.btnDatePicker.layer.borderColor = [UIColor blackColor].CGColor;
+    self.btnDatePicker.layer.borderWidth = 2;
+    self.btnDatePicker.layer.cornerRadius = 5;
+    
 }
 -(void)validate{
     Validator * validator= [[Validator alloc] init];
@@ -51,7 +74,6 @@
     [validator putRule:[Rules checkIfStringIsEmpty:self.tfDepartureCity.text WithFailureString:@"" withView:self.tfDepartureCity]];
     [validator putRule:[Rules checkIfStringIsEmpty:self.tfDistinationCity.text WithFailureString:@"" withView:self.tfDistinationCity]];
     
-    [validator putRule:[Rules checkIfStringIsEmpty:self.btnDatePicker.titleLabel.text WithFailureString:@"" withView:self.btnDatePicker]];
     
     [validator validate];
 }
@@ -72,6 +94,9 @@
         self.lblDistance.text = @"";
     }
 }
+-(void)dateSelected{
+    
+}
 #pragma
 #pragma mark - ValidatorDelegate Methods
 
@@ -80,11 +105,12 @@
 }
 - (void)onSuccess
 {
-    [[DataAccessController sharedInstance] getCities:@"ber" withCompletion:^(NSMutableArray * _Nonnull items, BOOL status) {
-        
-        
-    }];
+    CSToastStyle *style = [[CSToastStyle alloc] initWithDefaultStyle];
 
+    [self.view makeToast:@"Search is not yet implemented."
+                duration:1.5
+                position:CSToastPositionCenter
+                   style:style];
 }
 - (void)onFailure:(Rule *)failedRule{
     AFViewShaker * viewShaker= [[AFViewShaker alloc] initWithView:failedRule.view];
@@ -185,6 +211,16 @@
 
 - (IBAction)btnDatePickerAction:(id)sender {
     [self btnHideKeyBoardAction];
+    [ActionSheetDatePicker showPickerWithTitle:@"Select Date" datePickerMode:UIDatePickerModeDate selectedDate:currentSelectedDate minimumDate:[NSDate date] maximumDate:nil   doneBlock:^(ActionSheetDatePicker *picker, id selectedDate, id origin) {
+        currentSelectedDate = selectedDate;
+        [self initData];
+        
+    } cancelBlock:^(ActionSheetDatePicker *picker) {
+        
+        
+    } origin:self.btnDatePicker];
+    
+    
 }
 - (IBAction)btnHideKeyBoardAction  {
     [self.tfDepartureCity resignFirstResponder];

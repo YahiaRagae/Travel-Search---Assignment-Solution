@@ -179,29 +179,71 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="Kfh-d0-L9i">
-                                        <rect key="frame" x="0.0" y="253" width="320" height="120"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="Kfh-d0-L9i">
+                                        <rect key="frame" x="0.0" y="253" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kfh-d0-L9i" id="41d-fP-5hP">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ND0-IV-cGy">
-                                                    <rect key="frame" x="8" y="16" width="304" height="30"/>
-                                                    <state key="normal" title="DatePicker"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ND0-IV-cGy">
+                                                    <rect key="frame" x="8" y="8" width="272" height="30"/>
+                                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" title="Select Date">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="btnDatePickerAction:" destination="S6V-7Z-VQv" eventType="touchUpInside" id="S8j-5c-KdK"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1SU-11-RLj">
-                                                    <rect key="frame" x="8" y="74" width="70" height="30"/>
-                                                    <state key="normal" title="Search"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calnder" translatesAutoresizingMaskIntoConstraints="NO" id="946-SI-JfT">
+                                                    <rect key="frame" x="288" y="13" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="H8X-E9-gvL"/>
+                                                        <constraint firstAttribute="height" constant="20" id="vbZ-rS-mgD"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ND0-IV-cGy" secondAttribute="bottom" constant="6" id="3RQ-Ub-KFI"/>
+                                                <constraint firstItem="946-SI-JfT" firstAttribute="leading" secondItem="ND0-IV-cGy" secondAttribute="trailing" constant="8" id="AYm-SY-cd1"/>
+                                                <constraint firstAttribute="trailing" secondItem="946-SI-JfT" secondAttribute="trailing" constant="12" id="O7z-j2-bHr"/>
+                                                <constraint firstAttribute="bottom" secondItem="946-SI-JfT" secondAttribute="bottom" constant="11" id="dlG-MN-qvL"/>
+                                                <constraint firstItem="ND0-IV-cGy" firstAttribute="leading" secondItem="41d-fP-5hP" secondAttribute="leading" constant="8" id="jJT-tY-Yaa"/>
+                                                <constraint firstItem="ND0-IV-cGy" firstAttribute="top" secondItem="41d-fP-5hP" secondAttribute="top" constant="8" id="mPu-T7-u2T"/>
+                                                <constraint firstItem="946-SI-JfT" firstAttribute="top" secondItem="41d-fP-5hP" secondAttribute="top" constant="13" id="y5r-KF-3Mq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="gzW-tJ-cNX">
+                                        <rect key="frame" x="0.0" y="297" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gzW-tJ-cNX" id="D1o-Tn-e5f">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21Y-Ri-S0J">
+                                                    <rect key="frame" x="8" y="7" width="110" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="110" id="aXX-Qj-mqD"/>
+                                                    </constraints>
+                                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" title="Search">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
                                                     <connections>
-                                                        <action selector="btnSearchAction:" destination="S6V-7Z-VQv" eventType="touchUpInside" id="XgB-kP-0F0"/>
+                                                        <action selector="btnSearchAction:" destination="S6V-7Z-VQv" eventType="touchUpInside" id="Etc-Yg-1HE"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="21Y-Ri-S0J" firstAttribute="leading" secondItem="D1o-Tn-e5f" secondAttribute="leading" constant="8" id="2PV-IA-AWo"/>
+                                                <constraint firstAttribute="bottom" secondItem="21Y-Ri-S0J" secondAttribute="bottom" constant="7" id="DYr-Ve-zHB"/>
+                                                <constraint firstItem="21Y-Ri-S0J" firstAttribute="top" secondItem="D1o-Tn-e5f" secondAttribute="top" constant="7" id="l6m-B9-5HK"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
@@ -219,7 +261,7 @@
                         <outlet property="actIndicatorDeparture" destination="81N-tp-ndp" id="fU8-5T-2Qd"/>
                         <outlet property="actIndicatorDistination" destination="Ubp-qg-1HX" id="Iis-LL-FQL"/>
                         <outlet property="btnDatePicker" destination="ND0-IV-cGy" id="Z37-OK-DoH"/>
-                        <outlet property="btnSearch" destination="1SU-11-RLj" id="0uJ-k4-ZWl"/>
+                        <outlet property="btnSearch" destination="21Y-Ri-S0J" id="lfg-0r-X5U"/>
                         <outlet property="lblDistance" destination="1eE-9H-stz" id="biQ-Ct-EhZ"/>
                         <outlet property="tfDepartureCity" destination="ZWj-lt-NT7" id="d4T-qc-KcL"/>
                         <outlet property="tfDistinationCity" destination="oYd-mn-5km" id="y3Y-pV-hst"/>
@@ -230,4 +272,7 @@
             <point key="canvasLocation" x="1092" y="-96"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calnder" width="43" height="43"/>
+    </resources>
 </document>
