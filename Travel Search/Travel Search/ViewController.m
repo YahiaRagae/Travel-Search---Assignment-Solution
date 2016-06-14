@@ -30,6 +30,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+ 
 #pragma
 #pragma mark - Class Methods
 -(void)initData{
@@ -43,12 +44,11 @@
 }
 -(void) initViews{
     //init BackGround
-    UIView * bg= [[UIView alloc] initWithFrame:self.view.frame];
-    UIImageView * img = [[UIImageView alloc] initWithFrame:self.view.frame];
-    img.image = [UIImage imageNamed:@"bg"];
+    
+    UIImageView * img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg"]];
     img.alpha=0.2;
-    [bg addSubview:img];
-    [self.tableView setBackgroundView:bg];
+    img.contentMode = UIViewContentModeScaleAspectFill;
+    [self.tableView setBackgroundView:img];
     
     //init TFs
     
@@ -63,7 +63,7 @@
     
     //init DatePickerButton
     self.btnDatePicker.layer.borderColor = [UIColor blackColor].CGColor;
-    self.btnDatePicker.layer.borderWidth = 2;
+    self.btnDatePicker.layer.borderWidth = 1;
     self.btnDatePicker.layer.cornerRadius = 5;
     
 }
@@ -121,6 +121,10 @@
 }
 #pragma
 #pragma mark - UITextFieldDelegate Methods
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self btnHideKeyBoardAction];
+    return false;
+}
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     if(textField == self.tfDistinationCity){
         distinationItem = nil;
