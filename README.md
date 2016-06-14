@@ -10,14 +10,15 @@
 - Use Date Picker .
 - Use Reachability and show error message if inernet connection lost.
 - Support different screen sizes Using Auto Layout.
-- Suppoort Orintations [ Portrait , Landscape ] .
+- Support Orintations [ Portrait , Landscape ] .
+- Ready to use Multible DataSources
 
 
 ## Platforms ##
-- iOS 8 and later.
+- >= iOS 8.0 .
 
 ## Language ##
-- Objectiv-c .
+- Objective-c .
 - Swift 2.2 .
  
 
@@ -29,7 +30,6 @@
 - [TSMessages]  ( https://github.com/KrauseFx/TSMessages )
 - [ActionSheetPicker] ( https://github.com/skywinder/ActionSheetPicker-3.0 )
 - [Toast] ( https://github.com/scalessec/Toast )
-- [Validator Framework] ( https://github.com/07cs07/iOSValidator )
 - [Validator Framework] ( https://github.com/07cs07/iOSValidator )
 - [Reachability] ( https://developer.apple.com/library/ios/samplecode/Reachability/Introduction/Intro.html )
 
