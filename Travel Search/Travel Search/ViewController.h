@@ -9,7 +9,10 @@
 //https://github.com/gaurvw/MPGTextField
 #import <UIKit/UIKit.h>
 #import "MPGTextField.h"
-@interface ViewController : UITableViewController
+#import "Validator.h"
+#import <AFViewShaker/AFViewShaker.h>
+
+@interface ViewController : UITableViewController <ValidatorDelegate>
 
 @property (weak, nonatomic) IBOutlet MPGTextField *tfDepartureCity;
 @property (weak, nonatomic) IBOutlet MPGTextField *tfDistinationCity;

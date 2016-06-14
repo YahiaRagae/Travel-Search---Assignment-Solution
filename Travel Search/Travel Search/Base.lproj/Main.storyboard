@@ -94,10 +94,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Berlin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWj-lt-NT7" customClass="MPGTextField">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="line" placeholder="Berlin" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWj-lt-NT7" customClass="MPGTextField">
                                                     <rect key="frame" x="8" y="8" width="272" height="30"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <attributedString key="attributedText"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="81N-tp-ndp">
@@ -124,10 +123,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="USA" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYd-mn-5km" customClass="MPGTextField">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="line" placeholder="USA" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYd-mn-5km" customClass="MPGTextField">
                                                     <rect key="frame" x="8" y="8" width="272" height="30"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <attributedString key="attributedText"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Ubp-qg-1HX">

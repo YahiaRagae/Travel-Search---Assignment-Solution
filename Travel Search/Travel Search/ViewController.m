@@ -37,19 +37,49 @@
     [self.tableView setBackgroundView:bg];
 
 }
+-(void)validate{
+    Validator * validator= [[Validator alloc] init];
+    validator.delegate = self;
+    
+    [validator putRule:[Rules checkIfStringIsEmpty:self.tfDepartureCity.text WithFailureString:@"" withView:self.tfDepartureCity]];
+    [validator putRule:[Rules checkIfStringIsEmpty:self.tfDistinationCity.text WithFailureString:@"" withView:self.tfDistinationCity]];
+    
+    [validator putRule:[Rules checkIfStringIsEmpty:self.btnDatePicker.titleLabel.text WithFailureString:@"" withView:self.btnDatePicker]];
+    
+    [validator validate];
+}
 #pragma
-#pragma mark - IBAction Methods
-- (IBAction)btnSearchAction:(id)sender {
+#pragma mark - ValidatorDelegate Methods
+
+- (void)preValidation{
+    
+}
+- (void)onSuccess
+{
     [[DataAccessController sharedInstance] getCities:@"ber" withCompletion:^(NSMutableArray * _Nonnull items, BOOL status) {
         
         
     }];
 
 }
+- (void)onFailure:(Rule *)failedRule{
+    AFViewShaker * viewShaker= [[AFViewShaker alloc] initWithView:failedRule.view];
+    [viewShaker shake];
+    failedRule.view.layer.borderWidth = 2;
+    failedRule.view.layer.borderColor = [UIColor redColor].CGColor;
+    
+}
+#pragma
+#pragma mark - IBAction Methods
+- (IBAction)btnSearchAction:(id)sender {
+    [self btnHideKeyBoardAction];
+    [self validate];
+}
 
 - (IBAction)btnDatePickerAction:(id)sender {
+    [self btnHideKeyBoardAction];
 }
-- (IBAction)btnHideKeyBoardAction:(id)sender {
+- (IBAction)btnHideKeyBoardAction  {
     [self.tfDepartureCity resignFirstResponder];
     [self.tfDistinationCity resignFirstResponder];
 }

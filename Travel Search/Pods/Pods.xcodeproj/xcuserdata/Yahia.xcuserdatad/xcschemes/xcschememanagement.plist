@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AFViewShaker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -33,6 +38,16 @@
 			<true/>
 		</dict>
 		<key>83361C50D08B423C9F344881B1B2E0DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DDFD5E397CBD3E44AB508DE6B196680D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E3CD89B0EB47605ADA91BC66BAB5EFB8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
