@@ -23,7 +23,7 @@
     [self AddShineAnimationToView:_lblTitle];
    
     //open App
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self openApp];
     });
 }
@@ -37,7 +37,7 @@
 #pragma mark - Class Methods
 -(void)openApp{
     ViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-    [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController setViewControllers: [NSArray arrayWithObjects:vc, nil] animated:YES ];
 }
 #pragma
 #pragma mark - Utils Methods
