@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		005837E11D0F485C0062D978 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005837E01D0F485C0062D978 /* SplashScreenViewController.m */; };
+		005837E41D0F7EC10062D978 /* DataAccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005837E31D0F7EC10062D978 /* DataAccessController.swift */; };
+		005837E71D0F7EDB0062D978 /* OnlineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005837E51D0F7EDB0062D978 /* OnlineController.swift */; };
+		005837E81D0F7EDB0062D978 /* DBContontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005837E61D0F7EDB0062D978 /* DBContontroller.swift */; };
+		005837EA1D0F7F540062D978 /* BaseDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005837E91D0F7F540062D978 /* BaseDataFetcher.swift */; };
+		005837EC1D0F7F590062D978 /* CitiesDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005837EB1D0F7F590062D978 /* CitiesDataFetcher.swift */; };
+		005837F41D0F7FB00062D978 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 005837F11D0F7FB00062D978 /* Settings.plist */; };
+		005837F51D0F7FB00062D978 /* TSMessagesDefaultDesign.json in Resources */ = {isa = PBXBuildFile; fileRef = 005837F21D0F7FB00062D978 /* TSMessagesDefaultDesign.json */; };
 		00CD78F71D0DC6DB006ADE39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CD78F61D0DC6DB006ADE39 /* main.m */; };
 		00CD78FA1D0DC6DB006ADE39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CD78F91D0DC6DB006ADE39 /* AppDelegate.m */; };
 		00CD78FD1D0DC6DB006ADE39 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CD78FC1D0DC6DB006ADE39 /* ViewController.m */; };
@@ -25,6 +32,14 @@
 /* Begin PBXFileReference section */
 		005837DF1D0F485C0062D978 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
 		005837E01D0F485C0062D978 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
+		005837E21D0F7EC10062D978 /* Travel Search-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Travel Search-Bridging-Header.h"; path = "DataAccessLayer/DataAccessController/Travel Search-Bridging-Header.h"; sourceTree = "<group>"; };
+		005837E31D0F7EC10062D978 /* DataAccessController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccessController.swift; sourceTree = "<group>"; };
+		005837E51D0F7EDB0062D978 /* OnlineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineController.swift; sourceTree = "<group>"; };
+		005837E61D0F7EDB0062D978 /* DBContontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBContontroller.swift; sourceTree = "<group>"; };
+		005837E91D0F7F540062D978 /* BaseDataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDataFetcher.swift; sourceTree = "<group>"; };
+		005837EB1D0F7F590062D978 /* CitiesDataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesDataFetcher.swift; sourceTree = "<group>"; };
+		005837F11D0F7FB00062D978 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		005837F21D0F7FB00062D978 /* TSMessagesDefaultDesign.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TSMessagesDefaultDesign.json; sourceTree = "<group>"; };
 		00CD78F21D0DC6DB006ADE39 /* Travel Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CD78F61D0DC6DB006ADE39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00CD78F81D0DC6DB006ADE39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +78,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		005837ED1D0F7FB00062D978 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				005837EE1D0F7FB00062D978 /* db */,
+				005837F01D0F7FB00062D978 /* fonts */,
+				005837F11D0F7FB00062D978 /* Settings.plist */,
+				005837F21D0F7FB00062D978 /* TSMessagesDefaultDesign.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		005837EE1D0F7FB00062D978 /* db */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		005837F01D0F7FB00062D978 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		00CD78E91D0DC6DB006ADE39 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +124,7 @@
 		00CD78F41D0DC6DB006ADE39 /* Travel Search */ = {
 			isa = PBXGroup;
 			children = (
+				005837ED1D0F7FB00062D978 /* Resources */,
 				00CD792B1D0DC8A9006ADE39 /* Libs */,
 				00CD791A1D0DC730006ADE39 /* DataAccessLayer */,
 				00CD78F81D0DC6DB006ADE39 /* AppDelegate.h */,
@@ -104,6 +145,7 @@
 		00CD78F51D0DC6DB006ADE39 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				005837E21D0F7EC10062D978 /* Travel Search-Bridging-Header.h */,
 				00CD78F61D0DC6DB006ADE39 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -122,6 +164,8 @@
 		00CD791B1D0DC730006ADE39 /* DaraFetchers */ = {
 			isa = PBXGroup;
 			children = (
+				005837EB1D0F7F590062D978 /* CitiesDataFetcher.swift */,
+				005837E91D0F7F540062D978 /* BaseDataFetcher.swift */,
 			);
 			path = DaraFetchers;
 			sourceTree = "<group>";
@@ -129,6 +173,9 @@
 		00CD791C1D0DC730006ADE39 /* DataAccessController */ = {
 			isa = PBXGroup;
 			children = (
+				005837E51D0F7EDB0062D978 /* OnlineController.swift */,
+				005837E61D0F7EDB0062D978 /* DBContontroller.swift */,
+				005837E31D0F7EC10062D978 /* DataAccessController.swift */,
 			);
 			path = DataAccessController;
 			sourceTree = "<group>";
@@ -246,6 +293,8 @@
 				00CD79051D0DC6DB006ADE39 /* LaunchScreen.storyboard in Resources */,
 				00CD79021D0DC6DB006ADE39 /* Assets.xcassets in Resources */,
 				00CD79001D0DC6DB006ADE39 /* Main.storyboard in Resources */,
+				005837F51D0F7FB00062D978 /* TSMessagesDefaultDesign.json in Resources */,
+				005837F41D0F7FB00062D978 /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,13 +355,18 @@
 			files = (
 				00CD79291D0DC730006ADE39 /* Names.m in Sources */,
 				00CD79281D0DC730006ADE39 /* GeoPosition.m in Sources */,
+				005837EA1D0F7F540062D978 /* BaseDataFetcher.swift in Sources */,
 				005837E11D0F485C0062D978 /* SplashScreenViewController.m in Sources */,
+				005837E81D0F7EDB0062D978 /* DBContontroller.swift in Sources */,
 				00CD792A1D0DC730006ADE39 /* PlaceItem.m in Sources */,
 				00CD79271D0DC730006ADE39 /* AlternativeNames.m in Sources */,
 				00CD78FD1D0DC6DB006ADE39 /* ViewController.m in Sources */,
 				00CD78FA1D0DC6DB006ADE39 /* AppDelegate.m in Sources */,
+				005837EC1D0F7F590062D978 /* CitiesDataFetcher.swift in Sources */,
 				00CD792F1D0DC8B4006ADE39 /* MPGTextField.m in Sources */,
+				005837E71D0F7EDB0062D978 /* OnlineController.swift in Sources */,
 				00CD78F71D0DC6DB006ADE39 /* main.m in Sources */,
+				005837E41D0F7EC10062D978 /* DataAccessController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +479,14 @@
 			baseConfigurationReference = A920A21EBBF4DBB5E3AC9DBD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Travel Search/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goeuro.Travel-Search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Travel Search/DataAccessLayer/DataAccessController/Travel Search-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -438,11 +495,13 @@
 			baseConfigurationReference = 3A118ABBCBE22B0B47EDA04E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Travel Search/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.goeuro.Travel-Search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Travel Search/DataAccessLayer/DataAccessController/Travel Search-Bridging-Header.h";
 			};
 			name = Release;
 		};
