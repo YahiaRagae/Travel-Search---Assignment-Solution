@@ -25,7 +25,6 @@
 		00CD79281D0DC730006ADE39 /* GeoPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CD79221D0DC730006ADE39 /* GeoPosition.m */; };
 		00CD79291D0DC730006ADE39 /* Names.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CD79241D0DC730006ADE39 /* Names.m */; };
 		00CD792A1D0DC730006ADE39 /* PlaceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CD79261D0DC730006ADE39 /* PlaceItem.m */; };
-		00CD792F1D0DC8B4006ADE39 /* MPGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CD792E1D0DC8B4006ADE39 /* MPGTextField.m */; };
 		00F1263F1D102D3C000739DA /* Rule.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F1262B1D102D3C000739DA /* Rule.m */; };
 		00F126401D102D3C000739DA /* Rules.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F1262D1D102D3C000739DA /* Rules.m */; };
 		00F126411D102D3C000739DA /* InvalidTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F126301D102D3C000739DA /* InvalidTooltipView.m */; };
@@ -71,8 +70,6 @@
 		00CD79241D0DC730006ADE39 /* Names.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Names.m; sourceTree = "<group>"; };
 		00CD79251D0DC730006ADE39 /* PlaceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceItem.h; sourceTree = "<group>"; };
 		00CD79261D0DC730006ADE39 /* PlaceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceItem.m; sourceTree = "<group>"; };
-		00CD792D1D0DC8B4006ADE39 /* MPGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGTextField.h; sourceTree = "<group>"; };
-		00CD792E1D0DC8B4006ADE39 /* MPGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGTextField.m; sourceTree = "<group>"; };
 		00F1262A1D102D3C000739DA /* Rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rule.h; sourceTree = "<group>"; };
 		00F1262B1D102D3C000739DA /* Rule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rule.m; sourceTree = "<group>"; };
 		00F1262C1D102D3C000739DA /* Rules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rules.h; sourceTree = "<group>"; };
@@ -231,18 +228,8 @@
 			children = (
 				00F1264A1D104489000739DA /* Reachability */,
 				00F126291D102D3C000739DA /* Validator Framework */,
-				00CD792C1D0DC8B4006ADE39 /* MPGTextField */,
 			);
 			path = Libs;
-			sourceTree = "<group>";
-		};
-		00CD792C1D0DC8B4006ADE39 /* MPGTextField */ = {
-			isa = PBXGroup;
-			children = (
-				00CD792D1D0DC8B4006ADE39 /* MPGTextField.h */,
-				00CD792E1D0DC8B4006ADE39 /* MPGTextField.m */,
-			);
-			path = MPGTextField;
 			sourceTree = "<group>";
 		};
 		00F126281D10263D000739DA /* ViewControllers */ = {
@@ -468,7 +455,6 @@
 				00F126481D102D3C000739DA /* Validator.m in Sources */,
 				00F1264D1D104489000739DA /* Reachability.m in Sources */,
 				005837EC1D0F7F590062D978 /* CitiesDataFetcher.swift in Sources */,
-				00CD792F1D0DC8B4006ADE39 /* MPGTextField.m in Sources */,
 				005837E71D0F7EDB0062D978 /* OnlineController.swift in Sources */,
 				00F126401D102D3C000739DA /* Rules.m in Sources */,
 				00CD78F71D0DC6DB006ADE39 /* main.m in Sources */,
