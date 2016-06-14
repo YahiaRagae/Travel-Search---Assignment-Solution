@@ -1,10 +1,13 @@
 PODS:
+  - ABCustomUINavigationController (1.2.1)
   - Alamofire (3.4.1)
 
 DEPENDENCIES:
+  - ABCustomUINavigationController
   - Alamofire (~> 3.4)
 
 SPEC CHECKSUMS:
+  ABCustomUINavigationController: 6069af1d9e6c6d96896199f416b17850f921dfd9
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
 
 COCOAPODS: 0.39.0

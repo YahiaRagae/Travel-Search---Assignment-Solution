@@ -14,6 +14,60 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Informaci&#243;n de una pel&#237;cula
+	Nombre
+	Fecha
+	Escenas
+	Autor + cita
+	ImageLarge para mainscreen
+	ImageMedium para tarjeta
+
+	Frases
+		Autor (Nombre + Images)
+		Cita
+
+	Escenas
+		Imagen
+		Descripcion
+
+Pel&#237;culas
+o	Gladiator
+o	Pulp Fiction
+o	El Padrino
+o	La chaqueta met&#225;lica
+	Lo que el viento se llev&#243;
+	CasaBlanca
+	La lista de shindler
+o	Amelie
+	Resorvoir Dog
+	Pretty woman
+o	American History X
+o	El Silencio de los Corderos
+o	El exorcista
+	Saw I
+	Dracula de Bran Stoker
+	La Milla Verde
+o	Snach, Cerdos y Diamantes
+o	Watchmen
+o	Matrix
+o	StarWars
+	300
+	Inception
+	Terminator II
+	Die Hard
+	La Vida es Bella
+	Men In Black
+	
+
+
+</string>
+			<key>Title</key>
+			<string>ABCustomUINavigationController</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>Copyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
