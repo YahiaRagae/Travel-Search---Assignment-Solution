@@ -27,18 +27,7 @@ NSString *const kNamesCs = @"cs";
 @end
 
 @implementation Names
-
-@synthesize ca = _ca;
-@synthesize fr = _fr;
-@synthesize zh = _zh;
-@synthesize is = _is;
-@synthesize pt = _pt;
-@synthesize ru = _ru;
-@synthesize it = _it;
-@synthesize fi = _fi;
-@synthesize es = _es;
-@synthesize cs = _cs;
-
+ 
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
 {

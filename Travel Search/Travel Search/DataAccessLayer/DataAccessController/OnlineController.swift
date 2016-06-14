@@ -32,7 +32,7 @@ public class OnlineController: NSObject {
     {
         CitiesDataFetcher().getCities(term) { (items, status) in
             
-            NSLog("CitiesDataFetcher")
+            completion(items :items,status: status)
         }
         
     }

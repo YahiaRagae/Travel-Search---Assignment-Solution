@@ -8,16 +8,25 @@
 //http://www.goeuro.de/job-description?gh_jid=32973&apply=true
 //https://github.com/gaurvw/MPGTextField
 #import <UIKit/UIKit.h>
-#import "MPGTextField.h"
+#import <MLPAutoCompleteTextField/MLPAutoCompleteTextField.h>
 #import "Validator.h"
+#import "PlaceItem.h"
 #import <AFViewShaker/AFViewShaker.h>
 
-@interface ViewController : UITableViewController <ValidatorDelegate>
+@interface ViewController : UITableViewController <ValidatorDelegate,MLPAutoCompleteTextFieldDataSource,MLPAutoCompleteTextFieldDelegate,UITextFieldDelegate>{
+    NSMutableArray * currentSuggestions;
+    NSMutableArray * currentSuggestionsStrings;
+    
+    PlaceItem * departureItem;
+    PlaceItem * distinationItem;
 
-@property (weak, nonatomic) IBOutlet MPGTextField *tfDepartureCity;
-@property (weak, nonatomic) IBOutlet MPGTextField *tfDistinationCity;
+}
+
+@property (weak, nonatomic) IBOutlet MLPAutoCompleteTextField *tfDepartureCity;
+@property (weak, nonatomic) IBOutlet MLPAutoCompleteTextField *tfDistinationCity;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *actIndicatorDeparture;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *actIndicatorDistination;
+@property (weak, nonatomic) IBOutlet UILabel *lblDistance;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnDatePicker;
 @property (weak, nonatomic) IBOutlet UIButton *btnSearch;

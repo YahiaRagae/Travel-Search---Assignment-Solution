@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "Travel_Search-Swift.h"
+#import <CoreLocation/CoreLocation.h>
+
 @interface ViewController ()
 
 @end
@@ -29,13 +31,18 @@
 #pragma
 #pragma mark - Class Methods
 -(void) initViews{
+    //init BackGround
     UIView * bg= [[UIView alloc] initWithFrame:self.view.frame];
     UIImageView * img = [[UIImageView alloc] initWithFrame:self.view.frame];
     img.image = [UIImage imageNamed:@"bg"];
     img.alpha=0.2;
     [bg addSubview:img];
     [self.tableView setBackgroundView:bg];
-
+    
+    //init TFs
+    
+    [self.tfDistinationCity setAutoCompleteTableAppearsAsKeyboardAccessory:YES];
+    [self.tfDepartureCity setAutoCompleteTableAppearsAsKeyboardAccessory:YES];
 }
 -(void)validate{
     Validator * validator= [[Validator alloc] init];
@@ -47,6 +54,23 @@
     [validator putRule:[Rules checkIfStringIsEmpty:self.btnDatePicker.titleLabel.text WithFailureString:@"" withView:self.btnDatePicker]];
     
     [validator validate];
+}
+-(void)checkDistance{
+    if(distinationItem != nil && departureItem !=nil){
+        GeoPosition * distinationGeoPosition=distinationItem.geoPosition;
+        GeoPosition * departureGeoPosition=departureItem.geoPosition;
+        
+        CLLocation *departureLocation = [[CLLocation alloc] initWithLatitude:departureGeoPosition.latitude longitude:departureGeoPosition.longitude];
+        
+        CLLocation *distinationLocation = [[CLLocation alloc] initWithLatitude:distinationGeoPosition.latitude longitude:distinationGeoPosition.longitude];
+        
+        
+        CLLocationDistance distance = [departureLocation distanceFromLocation:distinationLocation];
+        
+        self.lblDistance.text = [NSString stringWithFormat:@"%.1f KM",(distance/1000)];
+    }else{
+        self.lblDistance.text = @"";
+    }
 }
 #pragma
 #pragma mark - ValidatorDelegate Methods
@@ -69,6 +93,89 @@
     failedRule.view.layer.borderColor = [UIColor redColor].CGColor;
     
 }
+#pragma
+#pragma mark - UITextFieldDelegate Methods
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    if(textField == self.tfDistinationCity){
+        distinationItem = nil;
+    }else{
+        departureItem = nil;
+    }
+    [self checkDistance];
+    
+    return true;
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    if(textField == self.tfDistinationCity){
+        
+        [self.actIndicatorDistination stopAnimating];
+    }else{
+        
+        [self.actIndicatorDeparture stopAnimating];
+    }
+    [self checkDistance];
+}
+
+#pragma
+#pragma mark - MLPAutoCompleteTextFieldDelegate Methods
+- (void)autoCompleteTextField:(MLPAutoCompleteTextField *)textField
+  didSelectAutoCompleteString:(NSString *)selectedString
+       withAutoCompleteObject:(id<MLPAutoCompletionObject>)selectedObject
+            forRowAtIndexPath:(NSIndexPath *)indexPath{
+    PlaceItem * item = (PlaceItem*)[currentSuggestions objectAtIndex:indexPath.row];
+    
+    if(textField == self.tfDistinationCity){
+        distinationItem = item;
+    }else{
+        departureItem = item;
+    }
+    [self checkDistance];
+}
+#pragma
+#pragma mark - MLPAutoCompleteTextFieldDataSource Methods
+- (void)autoCompleteTextField:(MLPAutoCompleteTextField *)textField
+ possibleCompletionsForString:(NSString *)string
+            completionHandler:(void (^)(NSArray *))handler
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+         if(textField == self.tfDistinationCity){
+            [self.actIndicatorDistination startAnimating];
+        }else{
+            [self.actIndicatorDeparture startAnimating];
+        }
+      });
+    if(string.length>0){
+        [[DataAccessController sharedInstance] getCities:string withCompletion:^(NSMutableArray * _Nonnull items, BOOL status) {
+            currentSuggestions = items;
+            currentSuggestionsStrings = [[NSMutableArray alloc]init];
+            for(int x=0;x<items.count;x++){
+                PlaceItem * item = (PlaceItem * )[items objectAtIndex:x];
+                
+                [currentSuggestionsStrings addObject:item.name];
+            }
+            handler(currentSuggestionsStrings);
+            if(textField == self.tfDistinationCity){
+                distinationItem = nil;
+                [self.actIndicatorDistination stopAnimating];
+            }else{
+                departureItem = nil;
+                [self.actIndicatorDeparture stopAnimating];
+            }
+        }];
+    }else if(currentSuggestionsStrings != nil && currentSuggestionsStrings.count != 0){
+        handler(currentSuggestionsStrings);
+         dispatch_async(dispatch_get_main_queue(), ^{
+            if(textField == self.tfDistinationCity){
+                distinationItem = nil;
+                [self.actIndicatorDistination stopAnimating];
+            }else{
+                departureItem = nil;
+                [self.actIndicatorDeparture stopAnimating];
+            }
+         });
+    }
+}
+
 #pragma
 #pragma mark - IBAction Methods
 - (IBAction)btnSearchAction:(id)sender {

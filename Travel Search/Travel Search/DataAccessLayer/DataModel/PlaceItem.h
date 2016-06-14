@@ -6,8 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class Names, GeoPosition, AlternativeNames;
+#import "Names.h"
+#import "GeoPosition.h"
+#import "AlternativeNames.h"
 
 @interface PlaceItem : NSObject <NSCoding, NSCopying>
 

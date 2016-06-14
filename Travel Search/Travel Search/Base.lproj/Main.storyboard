@@ -51,7 +51,7 @@
             </objects>
             <point key="canvasLocation" x="660" y="-96"/>
         </scene>
-        <!--View Controller-->
+        <!--Auto Complete Data Source-->
         <scene sceneID="eIg-HV-QNJ">
             <objects>
                 <tableViewController storyboardIdentifier="ViewController" id="S6V-7Z-VQv" customClass="ViewController" sceneMemberID="viewController">
@@ -94,10 +94,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="line" placeholder="Berlin" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWj-lt-NT7" customClass="MPGTextField">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="line" placeholder="Berlin" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWj-lt-NT7" customClass="MLPAutoCompleteTextField">
                                                     <rect key="frame" x="8" y="8" width="272" height="30"/>
                                                     <attributedString key="attributedText"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="autoCompleteDataSource" destination="S6V-7Z-VQv" id="nDa-9H-gMl"/>
+                                                        <outlet property="autoCompleteDelegate" destination="S6V-7Z-VQv" id="kjz-qd-kQF"/>
+                                                        <outlet property="delegate" destination="S6V-7Z-VQv" id="jhl-hK-xrz"/>
+                                                    </connections>
                                                 </textField>
                                                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="81N-tp-ndp">
                                                     <rect key="frame" x="288" y="13" width="20" height="20"/>
@@ -123,10 +128,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="line" placeholder="USA" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYd-mn-5km" customClass="MPGTextField">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="line" placeholder="USA" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYd-mn-5km" customClass="MLPAutoCompleteTextField">
                                                     <rect key="frame" x="8" y="8" width="272" height="30"/>
                                                     <attributedString key="attributedText"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="autoCompleteDataSource" destination="S6V-7Z-VQv" id="iGT-A7-62i"/>
+                                                        <outlet property="autoCompleteDelegate" destination="S6V-7Z-VQv" id="zWD-CK-e8Q"/>
+                                                        <outlet property="delegate" destination="S6V-7Z-VQv" id="owV-9T-Oom"/>
+                                                    </connections>
                                                 </textField>
                                                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Ubp-qg-1HX">
                                                     <rect key="frame" x="288" y="13" width="20" height="20"/>
@@ -145,8 +155,32 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="28" id="iQb-ey-Hdu">
+                                        <rect key="frame" x="0.0" y="225" width="320" height="28"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iQb-ey-Hdu" id="F8P-FC-sSy">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="28"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eE-9H-stz">
+                                                    <rect key="frame" x="8" y="4" width="304" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="1eE-9H-stz" firstAttribute="top" secondItem="F8P-FC-sSy" secondAttribute="top" constant="4" id="CfA-u6-Ahi"/>
+                                                <constraint firstAttribute="trailing" secondItem="1eE-9H-stz" secondAttribute="trailing" constant="8" id="Hd9-jW-Ekk"/>
+                                                <constraint firstAttribute="bottom" secondItem="1eE-9H-stz" secondAttribute="bottom" constant="3" id="W0t-NN-fdK"/>
+                                                <constraint firstItem="1eE-9H-stz" firstAttribute="leading" secondItem="F8P-FC-sSy" secondAttribute="leading" constant="8" id="gVd-Xd-9HY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="Kfh-d0-L9i">
-                                        <rect key="frame" x="0.0" y="225" width="320" height="120"/>
+                                        <rect key="frame" x="0.0" y="253" width="320" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kfh-d0-L9i" id="41d-fP-5hP">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
@@ -186,6 +220,7 @@
                         <outlet property="actIndicatorDistination" destination="Ubp-qg-1HX" id="Iis-LL-FQL"/>
                         <outlet property="btnDatePicker" destination="ND0-IV-cGy" id="Z37-OK-DoH"/>
                         <outlet property="btnSearch" destination="1SU-11-RLj" id="0uJ-k4-ZWl"/>
+                        <outlet property="lblDistance" destination="1eE-9H-stz" id="biQ-Ct-EhZ"/>
                         <outlet property="tfDepartureCity" destination="ZWj-lt-NT7" id="d4T-qc-KcL"/>
                         <outlet property="tfDistinationCity" destination="oYd-mn-5km" id="y3Y-pV-hst"/>
                     </connections>

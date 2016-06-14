@@ -14,7 +14,10 @@ class CitiesDataFetcher: BaseDataFetcher {
  
     func getCities(term : String  , withCompletion completion:(items : NSMutableArray, status : Bool )->Void)
     {
-        let link = "\(getLink(URL_CITIES))de/\(term)"
+        
+        
+        let link = "\(getLink(URL_CITIES))de/" + term.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())! ;
+            
         getRequestWithJsonReponse(link: link) { (response, status) in
             let items:NSMutableArray = self.parseCities(response: response)
             completion(items: items , status: status)
