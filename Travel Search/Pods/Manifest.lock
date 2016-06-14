@@ -2,15 +2,18 @@ PODS:
   - ABCustomUINavigationController (1.2.1)
   - AFViewShaker (0.0.2)
   - Alamofire (3.4.1)
+  - MLPAutoCompleteTextField (1.5)
 
 DEPENDENCIES:
   - ABCustomUINavigationController
   - AFViewShaker (~> 0.0.2)
   - Alamofire (~> 3.4)
+  - MLPAutoCompleteTextField
 
 SPEC CHECKSUMS:
   ABCustomUINavigationController: 6069af1d9e6c6d96896199f416b17850f921dfd9
   AFViewShaker: 7e4bc215ca3e92347b78da436fca74e1730b52e8
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  MLPAutoCompleteTextField: ba4d507bbff2bd4f139d4197814fc8dd39caf77e
 
 COCOAPODS: 0.39.0
