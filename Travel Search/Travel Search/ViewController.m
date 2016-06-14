@@ -149,7 +149,11 @@
        withAutoCompleteObject:(id<MLPAutoCompletionObject>)selectedObject
             forRowAtIndexPath:(NSIndexPath *)indexPath{
     PlaceItem * item = (PlaceItem*)[currentSuggestions objectAtIndex:indexPath.row];
-    
+    NSString * name = [item.names.dictionaryRepresentation objectForKey:[ [NSLocale currentLocale] objectForKey:NSLocaleLanguageCode]];
+    if(name == nil ){
+        name = item.name;
+    }
+    textField.text = name;
     if(textField == self.tfDistinationCity){
         distinationItem = item;
     }else{
@@ -177,7 +181,12 @@
             for(int x=0;x<items.count;x++){
                 PlaceItem * item = (PlaceItem * )[items objectAtIndex:x];
                 
-                [currentSuggestionsStrings addObject:item.name];
+                NSString * name = [item.names.dictionaryRepresentation objectForKey:[ [NSLocale currentLocale] objectForKey:NSLocaleLanguageCode]];
+                if(name == nil ){
+                    name = item.name;
+                }
+                
+                [currentSuggestionsStrings addObject:[NSString stringWithFormat:@"%@ (%@)",name,item.country]];
             }
             handler(currentSuggestionsStrings);
             if(textField == self.tfDistinationCity){
