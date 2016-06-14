@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+       Reachability *reachability;
+}
 
+@property (nonatomic , assign) Boolean internetStatus;
 @property (strong, nonatomic) UIWindow *window;
 
 

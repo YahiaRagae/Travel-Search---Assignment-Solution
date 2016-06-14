@@ -37,6 +37,7 @@
 		00F126471D102D3C000739DA /* ValidTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F1263A1D102D3C000739DA /* ValidTooltipView.m */; };
 		00F126481D102D3C000739DA /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F1263C1D102D3C000739DA /* Validator.m */; };
 		00F126491D102D3C000739DA /* ValidatorRules.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F1263E1D102D3C000739DA /* ValidatorRules.m */; };
+		00F1264D1D104489000739DA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F1264C1D104489000739DA /* Reachability.m */; };
 		5190C192D5B04FF93381B4B5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA23492762F8BBC86C568DB8 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,8 @@
 		00F1263C1D102D3C000739DA /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validator.m; sourceTree = "<group>"; };
 		00F1263D1D102D3C000739DA /* ValidatorRules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidatorRules.h; sourceTree = "<group>"; };
 		00F1263E1D102D3C000739DA /* ValidatorRules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidatorRules.m; sourceTree = "<group>"; };
+		00F1264B1D104489000739DA /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		00F1264C1D104489000739DA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		3A118ABBCBE22B0B47EDA04E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A920A21EBBF4DBB5E3AC9DBD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AA23492762F8BBC86C568DB8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,6 +229,7 @@
 		00CD792B1D0DC8A9006ADE39 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				00F1264A1D104489000739DA /* Reachability */,
 				00F126291D102D3C000739DA /* Validator Framework */,
 				00CD792C1D0DC8B4006ADE39 /* MPGTextField */,
 			);
@@ -292,6 +296,15 @@
 				00F126371D102D3C000739DA /* image_tooltip_valid@2x.png */,
 			);
 			path = ToolTipViewImages;
+			sourceTree = "<group>";
+		};
+		00F1264A1D104489000739DA /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				00F1264B1D104489000739DA /* Reachability.h */,
+				00F1264C1D104489000739DA /* Reachability.m */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 		E793EF57C92E13166FA06431 /* Pods */ = {
@@ -452,6 +465,7 @@
 				00CD78FD1D0DC6DB006ADE39 /* ViewController.m in Sources */,
 				00CD78FA1D0DC6DB006ADE39 /* AppDelegate.m in Sources */,
 				00F126481D102D3C000739DA /* Validator.m in Sources */,
+				00F1264D1D104489000739DA /* Reachability.m in Sources */,
 				005837EC1D0F7F590062D978 /* CitiesDataFetcher.swift in Sources */,
 				00CD792F1D0DC8B4006ADE39 /* MPGTextField.m in Sources */,
 				005837E71D0F7EDB0062D978 /* OnlineController.swift in Sources */,

@@ -6,9 +6,11 @@
 //  Copyright © 2016 Yahia Mahrous. All rights reserved.
 //
 
+
 #import "AppDelegate.h"
 #import "SplashScreenViewController.h"
 #import <ABCustomUINavigationController/CubeNavigationController.h>
+#import <TSMessages/TSMessage.h>
 @interface AppDelegate ()
 
 @end
@@ -29,6 +31,7 @@
     self.window.rootViewController=nav;
     [self.window makeKeyAndVisible];
     
+    [self checkConnectivity];
     return YES;
 }
 
@@ -52,6 +55,60 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma
+#pragma mark-  Connectivity
+-(void) checkConnectivity {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    
+    reachability = [Reachability reachabilityForInternetConnection];
+    [reachability startNotifier];
+    
+}
+- (void) reachabilityChanged:(NSNotification *)note
+{
+    Reachability* curReach = [note object];
+    NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+    if (curReach ==  reachability)
+    {
+        NetworkStatus netStatus = [curReach currentReachabilityStatus];
+        
+        switch (netStatus) {
+            case ReachableViaWiFi:
+            case ReachableViaWWAN:
+            {
+                 [TSMessage dismissActiveNotification];
+                self.internetStatus = YES;
+                
+            }
+                break;
+                
+            case NotReachable:
+            {
+                NSLog(@"UNREACHABLE!");
+                self.internetStatus = NO;
+                
+                [TSMessage showNotificationInViewController:[UIApplication sharedApplication].keyWindow.rootViewController
+                                                      title:@"Internet Connection Failed"
+                                                   subtitle:@"Please make sure that you are connected"
+                                                      image:nil
+                                                       type:TSMessageNotificationTypeError
+                                                   duration:-1
+                                                   callback:nil
+                                                buttonTitle:nil
+                                             buttonCallback:nil
+                                                 atPosition:TSMessageNotificationPositionBottom
+                                       canBeDismissedByUser:NO];
+            }
+                
+                break;
+        }
+    }
+    
+    
+    
 }
 
 @end

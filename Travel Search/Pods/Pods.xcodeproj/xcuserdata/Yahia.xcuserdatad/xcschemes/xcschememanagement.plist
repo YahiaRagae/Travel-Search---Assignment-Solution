@@ -19,12 +19,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HexColors.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MLPAutoCompleteTextField.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TSMessages.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,12 +47,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>66C335D8C29EE59CF21BF3EE92AF3B46</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>83361C50D08B423C9F344881B1B2E0DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C408D4E183A88B763793C217A66A1950</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D5D66AD0A64D48742D31ADD750E07534</key>
 		<dict>
 			<key>primary</key>
 			<true/>
