@@ -26,6 +26,17 @@
 		00CD79291D0DC730006ADE39 /* Names.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CD79241D0DC730006ADE39 /* Names.m */; };
 		00CD792A1D0DC730006ADE39 /* PlaceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CD79261D0DC730006ADE39 /* PlaceItem.m */; };
 		00CD792F1D0DC8B4006ADE39 /* MPGTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CD792E1D0DC8B4006ADE39 /* MPGTextField.m */; };
+		00F1263F1D102D3C000739DA /* Rule.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F1262B1D102D3C000739DA /* Rule.m */; };
+		00F126401D102D3C000739DA /* Rules.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F1262D1D102D3C000739DA /* Rules.m */; };
+		00F126411D102D3C000739DA /* InvalidTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F126301D102D3C000739DA /* InvalidTooltipView.m */; };
+		00F126421D102D3C000739DA /* TooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F126321D102D3C000739DA /* TooltipView.m */; };
+		00F126431D102D3C000739DA /* image_tooltip_invalid.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F126341D102D3C000739DA /* image_tooltip_invalid.png */; };
+		00F126441D102D3C000739DA /* image_tooltip_invalid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F126351D102D3C000739DA /* image_tooltip_invalid@2x.png */; };
+		00F126451D102D3C000739DA /* image_tooltip_valid.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F126361D102D3C000739DA /* image_tooltip_valid.png */; };
+		00F126461D102D3C000739DA /* image_tooltip_valid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F126371D102D3C000739DA /* image_tooltip_valid@2x.png */; };
+		00F126471D102D3C000739DA /* ValidTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F1263A1D102D3C000739DA /* ValidTooltipView.m */; };
+		00F126481D102D3C000739DA /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F1263C1D102D3C000739DA /* Validator.m */; };
+		00F126491D102D3C000739DA /* ValidatorRules.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F1263E1D102D3C000739DA /* ValidatorRules.m */; };
 		5190C192D5B04FF93381B4B5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA23492762F8BBC86C568DB8 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +72,25 @@
 		00CD79261D0DC730006ADE39 /* PlaceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceItem.m; sourceTree = "<group>"; };
 		00CD792D1D0DC8B4006ADE39 /* MPGTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGTextField.h; sourceTree = "<group>"; };
 		00CD792E1D0DC8B4006ADE39 /* MPGTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGTextField.m; sourceTree = "<group>"; };
+		00F1262A1D102D3C000739DA /* Rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rule.h; sourceTree = "<group>"; };
+		00F1262B1D102D3C000739DA /* Rule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rule.m; sourceTree = "<group>"; };
+		00F1262C1D102D3C000739DA /* Rules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rules.h; sourceTree = "<group>"; };
+		00F1262D1D102D3C000739DA /* Rules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rules.m; sourceTree = "<group>"; };
+		00F1262F1D102D3C000739DA /* InvalidTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvalidTooltipView.h; sourceTree = "<group>"; };
+		00F126301D102D3C000739DA /* InvalidTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvalidTooltipView.m; sourceTree = "<group>"; };
+		00F126311D102D3C000739DA /* TooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TooltipView.h; sourceTree = "<group>"; };
+		00F126321D102D3C000739DA /* TooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TooltipView.m; sourceTree = "<group>"; };
+		00F126341D102D3C000739DA /* image_tooltip_invalid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_tooltip_invalid.png; sourceTree = "<group>"; };
+		00F126351D102D3C000739DA /* image_tooltip_invalid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_tooltip_invalid@2x.png"; sourceTree = "<group>"; };
+		00F126361D102D3C000739DA /* image_tooltip_valid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_tooltip_valid.png; sourceTree = "<group>"; };
+		00F126371D102D3C000739DA /* image_tooltip_valid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_tooltip_valid@2x.png"; sourceTree = "<group>"; };
+		00F126381D102D3C000739DA /* TooltipViewPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TooltipViewPrivate.h; sourceTree = "<group>"; };
+		00F126391D102D3C000739DA /* ValidTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidTooltipView.h; sourceTree = "<group>"; };
+		00F1263A1D102D3C000739DA /* ValidTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidTooltipView.m; sourceTree = "<group>"; };
+		00F1263B1D102D3C000739DA /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
+		00F1263C1D102D3C000739DA /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validator.m; sourceTree = "<group>"; };
+		00F1263D1D102D3C000739DA /* ValidatorRules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidatorRules.h; sourceTree = "<group>"; };
+		00F1263E1D102D3C000739DA /* ValidatorRules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidatorRules.m; sourceTree = "<group>"; };
 		3A118ABBCBE22B0B47EDA04E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A920A21EBBF4DBB5E3AC9DBD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AA23492762F8BBC86C568DB8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +226,7 @@
 		00CD792B1D0DC8A9006ADE39 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				00F126291D102D3C000739DA /* Validator Framework */,
 				00CD792C1D0DC8B4006ADE39 /* MPGTextField */,
 			);
 			path = Libs;
@@ -219,6 +250,48 @@
 				00CD78FC1D0DC6DB006ADE39 /* ViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		00F126291D102D3C000739DA /* Validator Framework */ = {
+			isa = PBXGroup;
+			children = (
+				00F1262A1D102D3C000739DA /* Rule.h */,
+				00F1262B1D102D3C000739DA /* Rule.m */,
+				00F1262C1D102D3C000739DA /* Rules.h */,
+				00F1262D1D102D3C000739DA /* Rules.m */,
+				00F1262E1D102D3C000739DA /* ToolTipView */,
+				00F1263B1D102D3C000739DA /* Validator.h */,
+				00F1263C1D102D3C000739DA /* Validator.m */,
+				00F1263D1D102D3C000739DA /* ValidatorRules.h */,
+				00F1263E1D102D3C000739DA /* ValidatorRules.m */,
+			);
+			path = "Validator Framework";
+			sourceTree = "<group>";
+		};
+		00F1262E1D102D3C000739DA /* ToolTipView */ = {
+			isa = PBXGroup;
+			children = (
+				00F1262F1D102D3C000739DA /* InvalidTooltipView.h */,
+				00F126301D102D3C000739DA /* InvalidTooltipView.m */,
+				00F126311D102D3C000739DA /* TooltipView.h */,
+				00F126321D102D3C000739DA /* TooltipView.m */,
+				00F126331D102D3C000739DA /* ToolTipViewImages */,
+				00F126381D102D3C000739DA /* TooltipViewPrivate.h */,
+				00F126391D102D3C000739DA /* ValidTooltipView.h */,
+				00F1263A1D102D3C000739DA /* ValidTooltipView.m */,
+			);
+			path = ToolTipView;
+			sourceTree = "<group>";
+		};
+		00F126331D102D3C000739DA /* ToolTipViewImages */ = {
+			isa = PBXGroup;
+			children = (
+				00F126341D102D3C000739DA /* image_tooltip_invalid.png */,
+				00F126351D102D3C000739DA /* image_tooltip_invalid@2x.png */,
+				00F126361D102D3C000739DA /* image_tooltip_valid.png */,
+				00F126371D102D3C000739DA /* image_tooltip_valid@2x.png */,
+			);
+			path = ToolTipViewImages;
 			sourceTree = "<group>";
 		};
 		E793EF57C92E13166FA06431 /* Pods */ = {
@@ -299,10 +372,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				00CD79051D0DC6DB006ADE39 /* LaunchScreen.storyboard in Resources */,
+				00F126441D102D3C000739DA /* image_tooltip_invalid@2x.png in Resources */,
 				00CD79021D0DC6DB006ADE39 /* Assets.xcassets in Resources */,
 				00CD79001D0DC6DB006ADE39 /* Main.storyboard in Resources */,
 				005837F51D0F7FB00062D978 /* TSMessagesDefaultDesign.json in Resources */,
 				005837F41D0F7FB00062D978 /* Settings.plist in Resources */,
+				00F126461D102D3C000739DA /* image_tooltip_valid@2x.png in Resources */,
+				00F126451D102D3C000739DA /* image_tooltip_valid.png in Resources */,
+				00F126431D102D3C000739DA /* image_tooltip_invalid.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,18 +439,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				00CD79291D0DC730006ADE39 /* Names.m in Sources */,
+				00F126491D102D3C000739DA /* ValidatorRules.m in Sources */,
 				00CD79281D0DC730006ADE39 /* GeoPosition.m in Sources */,
 				005837EA1D0F7F540062D978 /* BaseDataFetcher.swift in Sources */,
 				005837E11D0F485C0062D978 /* SplashScreenViewController.m in Sources */,
 				005837E81D0F7EDB0062D978 /* DBContontroller.swift in Sources */,
+				00F1263F1D102D3C000739DA /* Rule.m in Sources */,
 				00CD792A1D0DC730006ADE39 /* PlaceItem.m in Sources */,
 				00CD79271D0DC730006ADE39 /* AlternativeNames.m in Sources */,
+				00F126421D102D3C000739DA /* TooltipView.m in Sources */,
+				00F126411D102D3C000739DA /* InvalidTooltipView.m in Sources */,
 				00CD78FD1D0DC6DB006ADE39 /* ViewController.m in Sources */,
 				00CD78FA1D0DC6DB006ADE39 /* AppDelegate.m in Sources */,
+				00F126481D102D3C000739DA /* Validator.m in Sources */,
 				005837EC1D0F7F590062D978 /* CitiesDataFetcher.swift in Sources */,
 				00CD792F1D0DC8B4006ADE39 /* MPGTextField.m in Sources */,
 				005837E71D0F7EDB0062D978 /* OnlineController.swift in Sources */,
+				00F126401D102D3C000739DA /* Rules.m in Sources */,
 				00CD78F71D0DC6DB006ADE39 /* main.m in Sources */,
+				00F126471D102D3C000739DA /* ValidTooltipView.m in Sources */,
 				005837E41D0F7EC10062D978 /* DataAccessController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
