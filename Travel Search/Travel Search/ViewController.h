@@ -8,8 +8,20 @@
 //http://www.goeuro.de/job-description?gh_jid=32973&apply=true
 //https://github.com/gaurvw/MPGTextField
 #import <UIKit/UIKit.h>
+#import "MPGTextField.h"
+@interface ViewController : UITableViewController
 
-@interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet MPGTextField *tfDepartureCity;
+@property (weak, nonatomic) IBOutlet MPGTextField *tfDistinationCity;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *actIndicatorDeparture;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *actIndicatorDistination;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnDatePicker;
+@property (weak, nonatomic) IBOutlet UIButton *btnSearch;
+
+
+- (IBAction)btnSearchAction:(id)sender;
+- (IBAction)btnDatePickerAction:(id)sender;
 
 
 @end
