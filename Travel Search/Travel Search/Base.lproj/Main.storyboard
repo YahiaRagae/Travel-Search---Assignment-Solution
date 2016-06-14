@@ -96,39 +96,53 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Berlin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWj-lt-NT7" customClass="MPGTextField">
                                                     <rect key="frame" x="8" y="8" width="272" height="30"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="81N-tp-ndp">
+                                                    <rect key="frame" x="288" y="13" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="81N-tp-ndp" secondAttribute="bottom" constant="15" id="03g-3d-KbY"/>
                                                 <constraint firstItem="ZWj-lt-NT7" firstAttribute="top" secondItem="L9L-w8-4cW" secondAttribute="top" constant="8" id="36l-tp-vye"/>
-                                                <constraint firstAttribute="trailing" secondItem="ZWj-lt-NT7" secondAttribute="trailing" constant="40" id="4Qe-nw-ARO"/>
                                                 <constraint firstItem="ZWj-lt-NT7" firstAttribute="leading" secondItem="L9L-w8-4cW" secondAttribute="leading" constant="8" id="Ftb-Pv-Tns"/>
                                                 <constraint firstAttribute="bottom" secondItem="ZWj-lt-NT7" secondAttribute="bottom" constant="10" id="IRP-BC-zAf"/>
+                                                <constraint firstItem="81N-tp-ndp" firstAttribute="leading" secondItem="ZWj-lt-NT7" secondAttribute="trailing" constant="8" id="ZS2-lo-jyL"/>
+                                                <constraint firstItem="81N-tp-ndp" firstAttribute="top" secondItem="L9L-w8-4cW" secondAttribute="top" constant="13" id="dPz-ai-5nh"/>
+                                                <constraint firstAttribute="trailing" secondItem="81N-tp-ndp" secondAttribute="trailing" constant="12" id="rhn-nk-AiC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="48" id="XKM-fW-Dnl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="48" id="eZb-k1-Fdp">
                                         <rect key="frame" x="0.0" y="177" width="320" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XKM-fW-Dnl" id="qru-FQ-apV">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eZb-k1-Fdp" id="4AX-Dn-eI3">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Berlin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vwr-4D-2JS" customClass="MPGTextField">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="USA" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYd-mn-5km" customClass="MPGTextField">
                                                     <rect key="frame" x="8" y="8" width="272" height="30"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Ubp-qg-1HX">
+                                                    <rect key="frame" x="288" y="13" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="vwr-4D-2JS" firstAttribute="leading" secondItem="qru-FQ-apV" secondAttribute="leading" constant="8" id="155-p2-kR7"/>
-                                                <constraint firstAttribute="trailing" secondItem="vwr-4D-2JS" secondAttribute="trailing" constant="40" id="Ggu-QC-AKk"/>
-                                                <constraint firstItem="vwr-4D-2JS" firstAttribute="top" secondItem="qru-FQ-apV" secondAttribute="top" constant="8" id="Pj2-Ty-bOc"/>
-                                                <constraint firstAttribute="bottom" secondItem="vwr-4D-2JS" secondAttribute="bottom" constant="10" id="YZ1-F7-fNY"/>
+                                                <constraint firstAttribute="bottom" secondItem="oYd-mn-5km" secondAttribute="bottom" constant="10" id="KYd-RX-s9H"/>
+                                                <constraint firstItem="oYd-mn-5km" firstAttribute="leading" secondItem="4AX-Dn-eI3" secondAttribute="leading" constant="8" id="OUN-jS-AJM"/>
+                                                <constraint firstItem="oYd-mn-5km" firstAttribute="top" secondItem="4AX-Dn-eI3" secondAttribute="top" constant="8" id="W1p-Hy-hBg"/>
+                                                <constraint firstItem="Ubp-qg-1HX" firstAttribute="leading" secondItem="oYd-mn-5km" secondAttribute="trailing" constant="8" id="dWB-TY-lIg"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ubp-qg-1HX" secondAttribute="trailing" constant="12" id="m2D-qv-hYh"/>
+                                                <constraint firstItem="Ubp-qg-1HX" firstAttribute="top" secondItem="4AX-Dn-eI3" secondAttribute="top" constant="13" id="rFw-4Y-SMd"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ubp-qg-1HX" secondAttribute="bottom" constant="15" id="vUE-2c-hOa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -170,10 +184,12 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="actIndicatorDeparture" destination="81N-tp-ndp" id="fU8-5T-2Qd"/>
+                        <outlet property="actIndicatorDistination" destination="Ubp-qg-1HX" id="Iis-LL-FQL"/>
                         <outlet property="btnDatePicker" destination="ND0-IV-cGy" id="Z37-OK-DoH"/>
                         <outlet property="btnSearch" destination="1SU-11-RLj" id="0uJ-k4-ZWl"/>
                         <outlet property="tfDepartureCity" destination="ZWj-lt-NT7" id="d4T-qc-KcL"/>
-                        <outlet property="tfDistinationCity" destination="vwr-4D-2JS" id="8iG-56-dca"/>
+                        <outlet property="tfDistinationCity" destination="oYd-mn-5km" id="y3Y-pV-hst"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEA-hI-dhr" userLabel="First Responder" sceneMemberID="firstResponder"/>
